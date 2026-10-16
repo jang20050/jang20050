@@ -1,4 +1,4 @@
-name: Generate Mario contribution animation
+name: Generate contribution hero animation
 
 on:
   schedule:
@@ -22,7 +22,7 @@ jobs:
           node-version: 20
 
       - name: Generate SVGs
-        run: node .github/scripts/mario-contrib.js
+        run: node .github/scripts/contrib-hero.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}

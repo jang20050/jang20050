@@ -1,11 +1,11 @@
-// Generates an animated SVG where a pixel plumber walks under the contribution
+// Generates an animated SVG where a pixel hero walks under the contribution
 // graph and head-butts each week, stacking that week's contribution blocks.
 //
 // Usage:
-//   GITHUB_TOKEN=... GITHUB_USER=jang20050 node .github/scripts/mario-contrib.js
-//   node .github/scripts/mario-contrib.js --sample   (random data, no token needed)
+//   GITHUB_TOKEN=... GITHUB_USER=jang20050 node .github/scripts/contrib-hero.js
+//   node .github/scripts/contrib-hero.js --sample   (random data, no token needed)
 //
-// Output: dist/mario-contrib.svg, dist/mario-contrib-dark.svg, dist/mario.svg
+// Output: dist/contrib-hero.svg, dist/contrib-hero-dark.svg, dist/hero.svg
 
 const fs = require('fs');
 const path = require('path');
@@ -37,25 +37,25 @@ const LEVELS = {
 
 // ---- sprite ----------------------------------------------------------------
 const PAL = {
-  R: '#e52521', // cap & shirt
+  Y: '#f5c400', // cap & shirt
   B: '#6b3a1e', // hair & shoes
   S: '#ffc890', // skin
   O: '#2b5bd7', // overalls
-  Y: '#ffd700', // buttons
+  W: '#ffffff', // buttons
 };
 
 const BODY = [
-  '....RRRRR...',
-  '...RRRRRRRR.',
+  '....YYYYY...',
+  '...YYYYYYYY.',
   '...BBBSSBS..',
   '..BSBSSSBSS.',
-  '..BSBBSSSBSS',
-  '..BBSSSSBBB.',
-  '....SSSSSS..',
-  '...RROORR...',
-  '..RRROORRR..',
-  '.RRRROOOORRR',
-  '.SSOYOOYOSS.',
+  '..BSBBSSSSSS',
+  '..BBSSSSSSS.',
+  '....SSSSS...',
+  '...YYOOYY...',
+  '..YYYOOYYY..',
+  '.YYYYOOOOYYY',
+  '.SSOWOOWOSS.',
   '.SSOOOOOOSS.',
 ];
 const FRAME_A = [...BODY, '..OOOOOOOO..', '..OOO..OOO..', '.BBB....BBB.', 'BBBB....BBBB'];
@@ -100,7 +100,7 @@ async function fetchWeeks(login, token) {
     headers: {
       Authorization: `bearer ${token}`,
       'Content-Type': 'application/json',
-      'User-Agent': 'mario-contrib',
+      'User-Agent': 'contrib-hero',
     },
     body: JSON.stringify({ query, variables: { login } }),
   });
@@ -133,7 +133,7 @@ function render(weeks, colors) {
   const height = groundY + 14;
   const jump = groundY - mh - gridBottom;
 
-  // Mario walks at constant speed; he is centered under column i at hit[i].
+  // The hero walks at constant speed; he is centered under column i at hit[i].
   const v = PITCH / T;
   const xStart = -mw - 6;
   const xEnd = width + 6;
@@ -210,9 +210,9 @@ async function main() {
   const weeks = sample ? sampleWeeks() : await fetchWeeks(login, token);
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  fs.writeFileSync(path.join(OUT_DIR, 'mario-contrib.svg'), render(weeks, THEMES.light));
-  fs.writeFileSync(path.join(OUT_DIR, 'mario-contrib-dark.svg'), render(weeks, THEMES.dark));
-  fs.writeFileSync(path.join(OUT_DIR, 'mario.svg'), renderIcon());
+  fs.writeFileSync(path.join(OUT_DIR, 'contrib-hero.svg'), render(weeks, THEMES.light));
+  fs.writeFileSync(path.join(OUT_DIR, 'contrib-hero-dark.svg'), render(weeks, THEMES.dark));
+  fs.writeFileSync(path.join(OUT_DIR, 'hero.svg'), renderIcon());
   console.log(`Generated ${weeks.length} weeks into ${OUT_DIR}`);
 }
 

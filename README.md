@@ -1,4 +1,4 @@
-# I'm jang20050 <img src="https://raw.githubusercontent.com/jang20050/jang20050/output/mario.svg" height="40" />
+# I'm jang20050 <img src="https://raw.githubusercontent.com/jang20050/jang20050/output/hero.svg" height="40" />
 
 - 🌱 I'm currently learning Physical AI (with python, claude.. )
 - 👯 Currently working in Daejeon, Korea
@@ -33,6 +33,6 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jang20050/jang20050/output/mario-contrib-dark.svg" />
-  <img alt="Mario building the contribution graph" src="https://raw.githubusercontent.com/jang20050/jang20050/output/mario-contrib.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jang20050/jang20050/output/contrib-hero-dark.svg" />
+  <img alt="Pixel hero building the contribution graph" src="https://raw.githubusercontent.com/jang20050/jang20050/output/contrib-hero.svg" />
 </picture>
