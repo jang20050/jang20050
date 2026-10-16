@@ -1,11 +1,10 @@
 # I'm jang20050 <img src="https://raw.githubusercontent.com/jang20050/jang20050/output/mario.svg" height="40" />
 
-- 🌱 I'm currently learning Physical AI (with python, claude.. ), Language: Python, C
-- 🔭 나의 현재 전공은 electronic engineering이다.
-- 🤔 I love Badminton
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 ...
+- 🌱 I'm currently learning Physical AI (with python, claude.. )
+- 👯 Currently working in Daejeon, Korea
+- 🔭 My major is electronic engineering
+- 💬 Ask me about electronic engineering and my projects
+- 📫 How to reach me: jang20050@gmail.com
 
 ## 🛠️ Mini Projects
 
@@ -18,7 +17,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 · [🔗 Live Demo](https://arduino-shop-five.vercel.app)
 
-### 🧊 [냉장고 탐험 (Fridge Explorer)](https://github.com/jang20050/fridge-explorer)
+### 🧊 [냉장고 탐험 생활 앱 (Fridge Explorer)](https://github.com/jang20050/fridge-explorer)
 탐험가가 내 냉장고 속을 돌아다니며 식재료를 넣고 꺼내는 생활 관리 게임입니다. 재료의 개수와 소비기한을 기록하면 신선도를 색으로 알려 줍니다. `다섯`, `-3`, `2026-13-45`처럼 엉뚱한 값을 넣으면 탐험가가 이유를 설명해 줍니다. 게임 로직은 파이썬으로 작성했고, Pyodide를 이용해 브라우저에서 바로 실행됩니다.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
